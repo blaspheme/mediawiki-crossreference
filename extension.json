@@ -4,7 +4,7 @@
 	"namemsg": "crossreference_name",
 	"descriptionmsg": "crossreference_desc",
 	"type": "parserhook",
-	"version": "6-beta",
+	"version": "5.2",
 	"url": "http://www.mediawiki.org/wiki/Extension:CrossReference",
 	"author": [
 		"[[:Wikipedia:Пика Пика|Stanislav Pika]]",

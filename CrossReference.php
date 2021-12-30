@@ -37,7 +37,7 @@ class CrossReference_HookStub
 	{
 		require( dirname(__FILE__) . '/CrossReference.mapping.magic.php');
 		foreach($tagMapping as $magicWord => $phpFunction) {
-			$parser->setHook( $magicWord, array( &$this, $phpFunction ) );
+			Hooks::run( $magicWord, array( &$this, $phpFunction ) );
 		}
 		foreach($functionMapping as $magicWord => $phpFunction) {
 			$parser->setFunctionHook( $magicWord, array( &$this, $phpFunction ) );
