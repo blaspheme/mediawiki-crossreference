@@ -13,14 +13,14 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 class CrossReferenceSetup {
     public static function wfSetupCrossReference()
     {
-        global $wgCrossReferenceHookStub, $wgHooks, $wgParser;
+        global $wgCrossReferenceHookStub, $wgHooks;
 
         $wgCrossReferenceHookStub = new CrossReference_HookStub;
 
-        $wgHooks['LanguageGetMagic'][] = array( &$wgCrossReferenceHookStub, 'getMagicWords' );
-        $wgHooks['ParserFirstCallInit'][] = array( &$wgCrossReferenceHookStub, 'registerParser' );
-        $wgHooks['ParserClearState'][] = array( &$wgCrossReferenceHookStub, 'clearState' );
-        $wgHooks['ParserAfterTidy'][] = array( &$wgCrossReferenceHookStub, 'parserAfterTidy' );
+        $wgHooks['LanguageGetMagic'][] = array( $wgCrossReferenceHookStub, 'getMagicWords' );
+        $wgHooks['ParserFirstCallInit'][] = array( $wgCrossReferenceHookStub, 'registerParser' );
+        $wgHooks['ParserClearState'][] = array( $wgCrossReferenceHookStub, 'clearState' );
+        $wgHooks['ParserAfterTidy'][] = array( $wgCrossReferenceHookStub, 'parserAfterTidy' );
     }
 }
 
